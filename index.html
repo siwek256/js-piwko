@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="10">
+    <!-- <meta http-equiv="refresh" content="1"> -->
     <link rel="stylesheet" href="style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,21 @@
 </head>
 
 <body id="body">
+    <header>
+        <h1 id="piwkojd">KOCHAM PIWO</h1>
+    </header>
     <!-- <div class="card">
         <img class="photo" src="" alt="">
         <h1 class="name"></h1>
         <h2 class="tagline"></h2>
         <h2 class="ph"></h2>
     </div> -->
+
+
+
+
+
+
 </body>
 <script>
     async function getData() {
@@ -29,6 +38,7 @@
             // const zdjecie_alt = document.getElementById("photo").setAttribute("alt", json.tagline)
             const card = document.createElement("div")
             card.classList.add("card")
+                // card.classList.add("flip-2-hor-top-1")
 
             const img = document.createElement("img")
             img.setAttribute("src", json[i].image_url)

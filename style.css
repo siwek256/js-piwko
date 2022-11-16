@@ -1,6 +1,7 @@
 div.card {
-    border: 1px solid magenta;
-    width: auto;
+    border: 1px magenta;
+    border-style: dotted dashed solid double;
+    width: 200px;
     height: auto;
     display: block;
     margin-left: auto;
@@ -21,6 +22,12 @@ h1 {
     size: 80%;
 }
 
+#piwkojd {
+    font-family: fantasy;
+    letter-spacing: 5px;
+    text-decoration: green wavy underline;
+}
+
 h2 {
     text-align: center;
     size: 80%;
@@ -31,4 +38,18 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
+}
+
+#piwkojd {
+    text-align: center;
+    size: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 100px;
+    margin: 0;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    padding: 0;
 }
