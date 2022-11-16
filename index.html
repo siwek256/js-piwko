@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piiiiiiwoooooo</title>
+</head>
+
+<body id="body">
+    <!-- <div class="card">
+        <img class="photo" src="" alt="">
+        <h1 class="name"></h1>
+        <h2 class="tagline"></h2>
+        <h2 class="ph"></h2>
+    </div> -->
+</body>
+<script>
+    async function getData() {
+        const data = await fetch("https://api.punkapi.com/v2/beers")
+        const json = await data.json()
+        console.log(json)
+        const body = document.getElementById("body")
+        for (var i = 0; i < json.length; i++) {
+            // zdjecie = document.getElementById("photo").setAttribute("src", json[i].image_url)
+            // const zdjecie_alt = document.getElementById("photo").setAttribute("alt", json.tagline)
+            const card = document.createElement("div")
+            card.classList.add("card")
+
+            const img = document.createElement("img")
+            img.setAttribute("src", json[i].image_url)
+            img.classList.add("photo")
+
+            const name = document.createElement("h1")
+            name.innerHTML = [json[i].name]
+            name.classList.add("name")
+
+            const tagline = document.createElement("h2")
+            tagline.innerHTML = [json[i].tagline]
+            tagline.classList.add("tagline")
+
+            const ph = document.createElement("h2")
+            ph.innerHTML = [json[i].ph]
+            ph.classList.add("ph")
+
+            card.appendChild(img)
+            card.appendChild(name)
+            card.appendChild(tagline)
+            card.appendChild(ph)
+            body.appendChild(card)
+
+
+        }
+
+
+    }
+    getData()
+</script>
+
+</html>
